@@ -6,9 +6,7 @@
 
 ### Input Files :
 #UofC_Covid_Tracking_Info_Weekly_Data.csv : This data include weekly averaged concentrations for SARS-CoV-2 N2, also PMMoV. This also includes weekly averaged cases for wastewater treatment plant (WWTP) that receives wastewaters coming from the university campus, also surrounding communities.
-
 #UofC_Chemical_Data_v3.csv : The concentrations for chemical marker (i.e., potassium).
-
 #results.CPC_N2_ALL.csv : The combined results for modelled values where all the three result files from the workflow 1.1 - 1.3 were 'manually' consolidated. 
 
 ### R scripts for modelling and uncertainty analysis : 
