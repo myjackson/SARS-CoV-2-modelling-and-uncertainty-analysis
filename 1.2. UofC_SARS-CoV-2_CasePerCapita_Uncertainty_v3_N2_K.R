@@ -20,10 +20,10 @@ median.Potassium.NW<-median(dat.chem.UCW$Potassium_mg.L,na.rm = TRUE)
 median.Potassium.SO<-median(dat.chem.UCS$Potassium_mg.L,na.rm = TRUE)
 
 # data subset (for each location) - main data
-dat.UCE<-subset(dat,Location=='UCE')
-dat.UCS<-subset(dat,Location=='UCS')
-dat.UCW<-subset(dat,Location=='UCW')
-dat.WWTP<-subset(dat,Location=='WWTP')
+dat.UCE<-subset(dat,Location=='UCE') # data for the catchment NE
+dat.UCS<-subset(dat,Location=='UCS') # data for the catchment SO
+dat.UCW<-subset(dat,Location=='UCW') # data for the catchment NW
+dat.WWTP<-subset(dat,Location=='WWTP') # data for wastewater treatment plant (WWTP)
 #dat.UofC<-subset(dat,Location=='UofC')
 
 # calculating CPC for WWTP
