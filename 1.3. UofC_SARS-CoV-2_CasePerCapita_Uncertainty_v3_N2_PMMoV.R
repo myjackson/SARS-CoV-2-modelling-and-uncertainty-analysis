@@ -10,13 +10,12 @@ dat.UCE<-subset(dat,Location=='UCE') # data for the catchment NE
 dat.UCS<-subset(dat,Location=='UCS') # data for the catchment SO
 dat.UCW<-subset(dat,Location=='UCW') # data for the catchment NW
 dat.WWTP<-subset(dat,Location=='WWTP') # data for wastewater treatment plant (WWTP)
-#dat.UofC<-subset(dat,Location=='UofC')
 
 # calculating CPC for WWTP
 case.tot.WWTP<-dat.WWTP$Weekly_Avr_Cases
 case.tot.WWTP.normalized<-case.tot.WWTP/1047622 # divided by serving population of 1,047,622 for WWTP-Bonnybrook
 
-## N2 - the following codes (L22-37) will generate data lists for 'N2'
+## N2 - the following codes (L20-35) will generate data lists for 'N2'
 # the lists for N2 data
 conc.N2.UCW<-dat.UCW$N2_Weekly_Avr
 conc.N2.UCS<-dat.UCS$N2_Weekly_Avr
@@ -35,7 +34,7 @@ conc.N2.UCS<-conc.N2.UCS[-ls.NA]
 conc.N2.UCE<-conc.N2.UCE[-ls.NA]
 conc.N2.WWTP<-conc.N2.WWTP[-ls.NA]
 
-## PMMoV - the following codes (L40-55) will generate data lists for 'PMMoV'
+## PMMoV - the following codes (L38-53) will generate data lists for 'PMMoV'
 conc.PMMoV.UCW<-dat.UCW$PMMoV_Weekly_Avr
 conc.PMMoV.UCS<-dat.UCS$PMMoV_Weekly_Avr
 conc.PMMoV.UCE<-dat.UCE$PMMoV_Weekly_Avr
@@ -82,7 +81,7 @@ for (i in c(1:1000)) {
   
 }
 
-# data framing (L86-95)
+# data framing (L85-94)
 dat.list<-dat.UCW$Date[-ls.NA]
 
 total.UofC.combined<-cbind(dat.list,c.UofC.combined)
