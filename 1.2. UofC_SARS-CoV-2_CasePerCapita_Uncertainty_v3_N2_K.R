@@ -8,10 +8,10 @@ dat.chem=read.csv(file.path(data_folder,"UofC_Chemical_Data_v3.csv"), sep = ",",
 dat$Location  = factor(dat$Location, levels=c('YA','CR','UCE','UCS', 'UCW', 'WWTP'))
 
 # data subset (for each location) - chemical data
-dat.chem.BBW<-subset(dat.chem,Site == 'BBW')
-dat.chem.UCE<-subset(dat.chem,Site == 'UCE')
-dat.chem.UCS<-subset(dat.chem,Site == 'UCS')
-dat.chem.UCW<-subset(dat.chem,Site == 'UCW')
+dat.chem.BBW<-subset(dat.chem,Site == 'BBW') # data for wastewater treatment plant (WWTP)
+dat.chem.UCE<-subset(dat.chem,Site == 'UCE') # data for the catchment NE
+dat.chem.UCS<-subset(dat.chem,Site == 'UCS') # data for the catchment SO
+dat.chem.UCW<-subset(dat.chem,Site == 'UCW') # data for the catchment NW
 
 # calculating median values for pottasium
 median.Potassium.WWTP<-median(dat.chem.BBW$Potassium_mg.L,na.rm = TRUE)
