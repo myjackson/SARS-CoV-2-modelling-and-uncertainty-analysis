@@ -24,7 +24,6 @@ dat.UCE<-subset(dat,Location=='UCE') # data for the catchment NE
 dat.UCS<-subset(dat,Location=='UCS') # data for the catchment SO
 dat.UCW<-subset(dat,Location=='UCW') # data for the catchment NW
 dat.WWTP<-subset(dat,Location=='WWTP') # data for wastewater treatment plant (WWTP)
-#dat.UofC<-subset(dat,Location=='UofC')
 
 # calculating CPC for WWTP
 case.tot.WWTP<-dat.WWTP$Weekly_Avr_Cases
@@ -73,7 +72,7 @@ for (i in c(1:1000)) {
   col.name<-c(col.name,paste('run',i,sep='.'))
 }
 
-# data framing (L77-86)
+# data framing (L76-85)
 dat.list<-dat.UCW$Date[-ls.NA]
 
 total.UofC.combined<-cbind(dat.list,c.UofC.combined)
