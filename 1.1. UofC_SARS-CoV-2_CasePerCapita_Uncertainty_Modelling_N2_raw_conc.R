@@ -7,11 +7,10 @@ dat=read.csv(file.path(data_folder,"UofC_Covid_Tracking_Info_Weekly_Data.csv"), 
 dat$Location  = factor(dat$Location, levels=c('YA','CR','UCE','UCS','UCW','WWTP')) # to designate the order of level
 
 # data subset
-dat.CR<-subset(dat,Location=='CR')
-dat.UCE<-subset(dat,Location=='UCE')
-dat.UCS<-subset(dat,Location=='UCS')
-dat.UCW<-subset(dat,Location=='UCW')
-dat.WWTP<-subset(dat,Location=='WWTP')
+dat.UCE<-subset(dat,Location=='UCE') # data for the catchment NE
+dat.UCS<-subset(dat,Location=='UCS') # data for the catchment SO
+dat.UCW<-subset(dat,Location=='UCW') # data for the catchment NW
+dat.WWTP<-subset(dat,Location=='WWTP') # data for wastewater treatment plant (WWTP)
 
 # to calculate cases per capita (for WWTP)
 case.tot.WWTP<-dat.WWTP$Weekly_Avr_Cases
